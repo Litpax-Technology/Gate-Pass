@@ -1,0 +1,23 @@
+{
+  "name": "Gate Pass System",
+  "short_name": "Gate Pass",
+  "description": "Litpax internal gate pass tracking",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f7f8fc",
+  "theme_color": "#635bff",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='40' fill='%23635bff'/%3E%3Ctext x='96' y='128' font-size='96' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'%3EGP%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='108' fill='%23635bff'/%3E%3Ctext x='256' y='340' font-size='256' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'%3EGP%3C/text%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
