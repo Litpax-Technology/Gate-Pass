@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#635bff" />
+  <link rel="manifest" href="manifest.json" />
+  <title>Gate Pass System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== Login ===== -->
+  <div id="loginView" class="login-wrap">
+    <div class="login-card fade-in">
+      <div class="login-logo">GP</div>
+      <h1 class="brand">Gate Pass</h1>
+      <p class="muted sub">Sign in to continue</p>
+
+      <div class="tabs">
+        <button class="tab active" data-tab="emp">Employee</button>
+        <button class="tab" data-tab="staff">Staff</button>
+      </div>
+
+      <!-- Employee login -->
+      <div id="tab-emp" class="tab-pane">
+        <input id="empId" class="input" type="text" autocomplete="off"
+               placeholder="Employee ID (e.g. EMP001)" />
+        <button id="empLoginBtn" class="btn btn-primary">Sign in</button>
+      </div>
+
+      <!-- Staff login -->
+      <div id="tab-staff" class="tab-pane hidden">
+        <input id="pin" class="input" type="password" inputmode="numeric" placeholder="PIN" />
+        <button id="staffLoginBtn" class="btn btn-primary">Sign in</button>
+      </div>
+
+      <div id="loginErr" class="err"></div>
+    </div>
+    <p class="footer-note muted">Litpax Technology · Internal Tool</p>
+  </div>
+
+  <!-- ===== App ===== -->
+  <div id="appView" class="app hidden">
+    <aside class="sidebar">
+      <div class="brand-side"><span class="dot"></span> Gate Pass</div>
+      <nav id="nav"></nav>
+      <div class="side-foot">
+        <div id="whoSide" class="who-side"></div>
+        <button id="logoutBtn" class="btn btn-ghost btn-block">Logout</button>
+      </div>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <h2 id="pageTitle" class="page-title">Dashboard</h2>
+        <div class="topbar-right">
+          <input id="search" class="input search hidden" placeholder="Search passes..." />
+          <button id="exportBtn" class="btn btn-ghost hidden">Export CSV</button>
+        </div>
+      </header>
+      <section id="page" class="page fade-in"></section>
+    </main>
+  </div>
+
+  <!-- Modal host -->
+  <div id="modalHost"></div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
